@@ -1,0 +1,132 @@
+body {
+     display: grid;
+     grid-template-areas: "header header"
+          "image info"
+          "footer footer";
+     grid-template-columns: repeat(2, 1fr);
+     background-color: hsl(257, 40%, 49%);
+     font-weight: 400;
+     max-width: 1440px;
+     margin: 20px 20px;
+     background-image: url('./images/bg-desktop.svg');
+     background-size: cover;
+
+}
+
+.cabecalho {
+     grid-area: header;
+     margin-bottom: 30px;
+     padding: 20px;
+}
+
+.cabecalho .titulo {
+     width: 150px;
+     height: 50px;
+}
+
+.image {
+     grid-area: image;
+     padding: 20px;
+}
+
+.info {
+     grid-area: info;
+     color: #fff;
+     padding: 20px;
+}
+
+.info h2 {
+     font-weight: 700;
+     font-family: 'Roboto', sans-serif;
+     padding: 10px 0;
+}
+
+.info p {
+     font-weight: 400;
+     line-height: 30px;
+     font-family: 'Open Sans', sans-serif;
+     display: flex;
+     justify-content: center;
+     padding: 10px 0;
+     margin-bottom: 30px;
+}
+
+.info a {
+     font-family: 'Roboto', sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     padding: 10px 80px;
+     background-color: #fff;
+     color: hsl(257, 40%, 49%);
+     border-radius: 30px;
+     box-shadow: 1px 1px 15px rgb(30, 30, 30);
+     transition: 0.3s;
+}
+
+.info a:hover {
+     background-color: hsl(300, 69%, 71%);
+     color: #fff;
+}
+
+.footer {
+     grid-area: footer;
+     display: flex;
+     flex-direction: column;
+}
+
+.footer .social {
+     display: flex;
+     justify-content: flex-end;
+}
+
+.footer .social a {
+     font-size: 20px;
+     color: #fff;
+     padding: 10px;
+     margin-top: 20px;
+     transition: 0.3s;
+}
+
+.footer .social a:hover {
+     color: hsl(300, 69%, 71%);
+}
+
+.footer .attribution {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+     font-size: 10px;
+     color: #fff;
+     display: flex;
+     justify-content: center;
+}
+
+.footer .attribution a {
+     color: #fff;
+     transition: 0.3s;
+}
+
+.footer .attribution a:hover {
+     color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 375px) {
+     body {
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          padding: 0;
+          background-image: url('./images/bg-mobile.svg');
+          background-size: cover;
+     }
+
+     .info {
+          text-align: center;
+          margin: 40px 0;
+     }
+
+     .footer .social{
+          display: flex;
+          justify-content: center;
+     }
+     
+}
